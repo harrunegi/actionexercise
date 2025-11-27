@@ -1,0 +1,14 @@
+name: exercise-first
+on: push
+jobs:
+    Test-Job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkoutrepo
+              uses: actions/checkout@v3
+            - name: Install dependencies
+              run: npm ci
+              name: Lint Testing
+              run: npm run lint && npm test
+              name: Deploycode
+              run: echo "Deploying code..."
