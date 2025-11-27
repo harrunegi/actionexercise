@@ -8,7 +8,7 @@ jobs:
               uses: actions/checkout@v3
             - name: Install dependencies
               run: npm ci
-              name: Lint Testing
+            - name: Lint Testing
               run: npm run lint && npm test
-              name: Deploycode
+            - name: Deploycode
               run: echo "Deploying code..."
