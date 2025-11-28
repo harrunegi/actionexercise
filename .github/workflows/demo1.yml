@@ -1,7 +1,9 @@
 name: Events Demo 1
-on: ...
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
-  deploy:
+  deploy: 
     runs-on: ubuntu-latest
     steps:
       - name: Output event data
